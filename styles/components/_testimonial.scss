@@ -1,0 +1,135 @@
+.testimonial {
+  $self: &;
+  background-color: $c-grey--light;
+  padding: 3rem 2rem;
+  text-align: center;
+
+  &__quote {
+    position: relative;
+    max-width: 850px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.25rem;
+    font-style: italic;
+    line-height: 1.6;
+  }
+
+  &__quote-sign {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    top: -2rem;
+    left: -1rem;
+    fill: $c-purple;
+    opacity: 0.2;
+
+    .svg {
+      height: 80;
+      width: 80;
+    }
+  }
+
+  &__person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  &__name {
+    margin-bottom: 0.25rem;
+    font-size: 1.125rem;
+    color: $c-purple;
+  }
+
+  &__image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem auto;
+    border: 2px solid $c-grey;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__position-container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__position {
+    font-weight: 100;
+  }
+
+  &__slash {
+    display: none;
+    color: $c-purple;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  &--simple {
+    #{$self}__quote {
+      &::before,
+      &::after {
+        content: '"';
+      }
+    }
+
+    #{$self}__name {
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  &--fancy {
+    #{$self}__image {
+      border-color: $c-purple;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    padding-top: 4rem;
+
+    &__person {
+      display: flex;
+      width: 60%;
+      justify-content: center;
+    }
+
+    &__name {
+      margin: 0 0.5rem 0;
+      color: initial;
+    }
+
+    &__slash {
+      display: inline;
+    }
+
+    &__position {
+      margin: 0.125rem 0 0 0.5rem;
+    }
+
+    &--fancy {
+      #{$self}__person {
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    display: flex;
+    justify-content: center;
+
+    &__image {
+      width: 150px;
+      height: 150px;
+      margin: 0 2rem 0 0;
+      flex-shrink: 0;
+    }
+  }
+}

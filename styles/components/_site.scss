@@ -1,0 +1,12 @@
+@import '../mixins/container';
+
+.site {
+    @include container;
+    margin-top: 3rem;
+
+    &__title {
+        margin-bottom: 3rem;
+        text-align: center;
+        color: $c-purple;
+    }
+}
