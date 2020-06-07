@@ -38,7 +38,6 @@
   &__name {
     margin-bottom: 0.25rem;
     font-size: 1.125rem;
-    color: $c-purple;
   }
 
   &__image {
@@ -88,6 +87,10 @@
     #{$self}__image {
       border-color: $c-purple;
     }
+
+    #{$self}__name {
+      color: $c-purple;
+    }
   }
 
   @media only screen and (min-width: 768px) {
@@ -101,7 +104,6 @@
 
     &__name {
       margin: 0 0.5rem 0;
-      color: initial;
     }
 
     &__slash {
