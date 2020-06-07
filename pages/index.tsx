@@ -22,21 +22,21 @@ export default function Home() {
         <h1 className="site__title">Welcome to Leila UI</h1>
         <ul>
           <li>
-            <Link href="/component">
-              <a>Component page</a>
+            <Link href="/components/testimonial">
+              <a>Testimonial component page</a>
             </Link>
           </li>
         </ul>
-        <section className="section">
+        {/* <section className="section">
           <h2 className="section__title">Testimonial</h2>
           <div className="section__content">
             <Testimonial
-              quote="Nap all day cat dog hate mouse eat string barf pillow no baths hate everything but kitty poochy. Sleep on keyboard toy mouse squeak roll over. Mesmerizing birds. Poop on grasses licks paws destroy couch intently sniff hand. The dog smells bad gnaw the corn cob."
+              
               name="Leila Whitepanther"
               position="Director of Naps"
             />
           </div>
-        </section>
+        </section> */}
       </main>
     </div>
   )

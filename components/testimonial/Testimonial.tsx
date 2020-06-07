@@ -4,7 +4,6 @@ import QuoteSign from './images/quote.svg'
 
 type Props = {
   theme?: 'fancy' | 'simple'
-  quote: string
   name?: string
   position?: string
   imageUrl?: string
@@ -12,10 +11,10 @@ type Props = {
 
 const Testimonial: FC<Props> = ({
   theme = 'simple',
-  quote,
   name,
   position,
   imageUrl,
+  children,
 }) => {
   const blockClass = classNames('testimonial', {
     'testimonial--simple': theme === 'simple',
@@ -36,7 +35,7 @@ const Testimonial: FC<Props> = ({
               <QuoteSign />
             </div>
           )}
-          {quote}
+          {children}
         </blockquote>
         {name && (
           <div className="testimonial__person">
