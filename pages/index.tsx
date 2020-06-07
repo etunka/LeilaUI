@@ -27,16 +27,6 @@ export default function Home() {
             </Link>
           </li>
         </ul>
-        {/* <section className="section">
-          <h2 className="section__title">Testimonial</h2>
-          <div className="section__content">
-            <Testimonial
-              
-              name="Leila Whitepanther"
-              position="Director of Naps"
-            />
-          </div>
-        </section> */}
       </main>
     </div>
   )
