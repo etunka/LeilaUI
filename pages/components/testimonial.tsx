@@ -29,7 +29,6 @@ export default function TestimonialPage() {
       </Head>
 
       <main>
-        <h1 className="site__title">Welcome to Leila UI</h1>
         <section className="section">
           <Link href="/">
             <a>Home</a>

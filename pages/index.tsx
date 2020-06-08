@@ -20,10 +20,18 @@ export default function Home() {
 
       <main>
         <h1 className="site__title">Welcome to Leila UI</h1>
+        <h2 className="site__intro">
+          ~a minimalist UI library made with React and some catnip~
+        </h2>
         <ul>
           <li>
             <Link href="/components/testimonial">
-              <a>Testimonial component page</a>
+              <a>Testimonial sections</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/components/header">
+              <a>Header sections</a>
             </Link>
           </li>
         </ul>
