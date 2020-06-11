@@ -1,0 +1,43 @@
+.menu {
+  $self: &;
+  display: none;
+
+  @media only screen and (min-width: 1024px) {
+    display: block;
+
+    &__list {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__item {
+      margin-left: 1.75rem;
+
+      &:hover {
+        color: $c-primary;
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    &--primary {
+      flex-basis: 60%;
+    }
+
+    &--secondary {
+      flex-basis: 18%;
+
+      #{$self}__list {
+        justify-content: flex-end;
+      }
+    }
+
+    .header--single & {
+      flex-basis: auto;
+    }
+  }
+
+  @media only screen and (min-width: 1280px) {
+  }
+}

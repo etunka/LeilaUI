@@ -1,3 +1,5 @@
+@import 'base/colors';
+
 body {
   font-family: 'Rubik', sans-serif;
 }
@@ -14,6 +16,17 @@ h2 {
 p,
 blockquote {
   font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transform: color 0.3s;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
 @media only screen and (min-width: 768px) {

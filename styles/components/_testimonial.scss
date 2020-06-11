@@ -1,6 +1,5 @@
 .testimonial {
   $self: &;
-  background-color: $c-grey--light;
   padding: 3rem 2rem;
   text-align: center;
 
@@ -19,7 +18,7 @@
     height: 90px;
     top: -2rem;
     left: -1rem;
-    fill: $c-purple;
+    fill: $c-primary;
     opacity: 0.2;
 
     .svg {
@@ -65,7 +64,7 @@
 
   &__slash {
     display: none;
-    color: $c-purple;
+    color: $c-primary;
     font-size: 2rem;
     font-weight: bold;
   }
@@ -85,11 +84,11 @@
 
   &--fancy {
     #{$self}__image {
-      border-color: $c-purple;
+      border-color: $c-primary;
     }
 
     #{$self}__name {
-      color: $c-purple;
+      color: $c-primary;
     }
   }
 

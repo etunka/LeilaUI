@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import classNames from 'classnames'
 
 type Props = {
-  primaryMenu: React.ReactNode | HTMLElement
+  primaryMenu?: React.ReactNode | HTMLElement
   secondaryMenu?: React.ReactNode | HTMLElement
   logo?: React.ReactNode | HTMLElement
   logoPosition?: 'left' | 'center'

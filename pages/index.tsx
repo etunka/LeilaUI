@@ -26,12 +26,12 @@ export default function Home() {
         <ul>
           <li>
             <Link href="/components/testimonial">
-              <a>Testimonial sections</a>
+              <a>Testimonial components</a>
             </Link>
           </li>
           <li>
             <Link href="/components/header">
-              <a>Header sections</a>
+              <a>Header components</a>
             </Link>
           </li>
         </ul>
