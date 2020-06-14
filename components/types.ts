@@ -10,3 +10,11 @@ export type MenuItemNode = {
   type: 'node'
   content: React.ReactNode | HTMLElement
 }
+
+export type LanguageCode = 'en' | 'nl'
+
+export type Language = {
+  code: LanguageCode
+  label: string
+  rootUrl: string
+}

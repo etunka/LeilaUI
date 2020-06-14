@@ -1,36 +1,26 @@
 import React, { FC, useState } from 'react'
 import Link from 'next/link'
 import classNames from 'classnames'
+import { Language, LanguageCode } from './types'
 
 type Props = {
-  defaultLanguage: string
-  alternativeLanguage: string
-  currentUrl: string
+  languages: Language[]
+  selected: LanguageCode
 }
 
-const ToggleLanguage: FC<Props> = ({
-  defaultLanguage,
-  alternativeLanguage,
-  currentUrl,
-}) => {
-  const [active, setActive] = useState(false)
-  const languageClass = classNames('toggle-language__item', {
-    active: active,
-  })
-
+const ToggleLanguage: FC<Props> = ({ languages, selected }) => {
   return (
-    <div className="toggle-language">
-      <button className={languageClass} onClick={() => setActive(!active)}>
-        <Link href={currentUrl}>
-          <a>{defaultLanguage}</a>
-        </Link>
-      </button>
-      <span>/</span>
-      <button className={languageClass} onClick={() => setActive(!active)}>
-        <Link href={currentUrl}>
-          <a>{alternativeLanguage}</a>
-        </Link>
-      </button>
+    <div className={'toggle-language'}>
+      {languages.map((language, index) => {
+        const languageClass = classNames('toggle-language__item', {
+          selected: selected,
+        })
+        return (
+          <Link href={language.rootUrl} key={index}>
+            <a className={languageClass}>{language.label}</a>
+          </Link>
+        )
+      })}
     </div>
   )
 }

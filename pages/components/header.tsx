@@ -4,6 +4,7 @@ import Header from 'components/header/Header'
 import Logo from 'components/Logo'
 import NavigationMenu from 'components/NavigationMenu'
 import ToggleLanguage from 'components/ToggleLanguage'
+import { languages } from 'components/constants'
 
 export default function HeaderPage() {
   return (
@@ -105,11 +106,7 @@ export default function HeaderPage() {
                     {
                       type: 'node',
                       content: (
-                        <ToggleLanguage
-                          defaultLanguage="EN"
-                          alternativeLanguage="NL"
-                          currentUrl="/components/header"
-                        />
+                        <ToggleLanguage languages={languages} selected="en" />
                       ),
                     },
                   ]}
