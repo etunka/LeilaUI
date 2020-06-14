@@ -1,0 +1,9 @@
+.toggle-language {
+  display: flex;
+
+  &__item a {
+    .active & {
+      color: $c-primary;
+    }
+  }
+}

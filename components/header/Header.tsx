@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import classNames from 'classnames'
+import Hamburger from './Hamburger'
 
 type Props = {
   primaryMenu?: React.ReactNode | HTMLElement
@@ -28,6 +29,7 @@ const Header: FC<Props> = ({
       {secondaryMenu && (
         <div className="menu menu--secondary">{secondaryMenu}</div>
       )}
+      <Hamburger />
     </div>
   )
 }

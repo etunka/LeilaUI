@@ -9,11 +9,9 @@ type Props = {
 const MenuItem: FC<Props> = ({ data }) => {
   const { label, url } = data
   return (
-    <li className="menu__item">
-      <Link href={url ? url : '#'}>
-        <a>{label}</a>
-      </Link>
-    </li>
+    <Link href={url ? url : '#'}>
+      <a>{label}</a>
+    </Link>
   )
 }
 

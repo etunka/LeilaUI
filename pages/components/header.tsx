@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Header from 'components/header/Header'
 import Logo from 'components/Logo'
 import NavigationMenu from 'components/NavigationMenu'
+import ToggleLanguage from 'components/ToggleLanguage'
 
 export default function HeaderPage() {
   return (
@@ -32,7 +33,6 @@ export default function HeaderPage() {
             <Header
               logo={
                 <Logo
-                  theme="text"
                   imageUrl="/images/leila-logo-horizontal.png"
                   size="large"
                 />
@@ -41,22 +41,26 @@ export default function HeaderPage() {
                 <NavigationMenu
                   menuItems={[
                     {
+                      type: 'data',
                       label: 'Smelly cat',
                       children: [
                         {
+                          type: 'data',
                           label: 'Smelly cat',
                         },
                         {
+                          type: 'data',
                           label: 'Smelly cat',
                         },
                         {
+                          type: 'data',
                           label: "It's not your fault",
                         },
                       ],
                     },
-                    { label: 'Smelly cat' },
-                    { label: 'What are they' },
-                    { label: 'Feeding you' },
+                    { type: 'data', label: 'Smelly cat' },
+                    { type: 'data', label: 'What are they' },
+                    { type: 'data', label: 'Feeding you' },
                   ]}
                 />
               }
@@ -69,7 +73,6 @@ export default function HeaderPage() {
             <Header
               logo={
                 <Logo
-                  theme="text"
                   imageUrl="/images/leila-logo-horizontal.png"
                   size="large"
                 />
@@ -78,22 +81,17 @@ export default function HeaderPage() {
                 <NavigationMenu
                   menuItems={[
                     {
+                      type: 'data',
                       label: 'Smelly cat',
                       children: [
-                        {
-                          label: 'Smelly cat',
-                        },
-                        {
-                          label: 'Smelly cat',
-                        },
-                        {
-                          label: "It's not your fault",
-                        },
+                        { type: 'data', label: 'Smelly cat' },
+                        { type: 'data', label: 'Smelly cat' },
+                        { type: 'node', content: <div>Smelly cat</div> },
                       ],
                     },
-                    { label: 'Smelly cat' },
-                    { label: 'What are they' },
-                    { label: 'Feeding you' },
+                    { type: 'data', label: 'Smelly cat' },
+                    { type: 'data', label: 'What are they' },
+                    { type: 'data', label: 'Feeding you' },
                   ]}
                 />
               }
@@ -101,9 +99,19 @@ export default function HeaderPage() {
                 <NavigationMenu
                   menuItems={[
                     {
+                      type: 'data',
                       label: 'Login',
                     },
-                    { label: 'EN / NL' },
+                    {
+                      type: 'node',
+                      content: (
+                        <ToggleLanguage
+                          defaultLanguage="EN"
+                          alternativeLanguage="NL"
+                          currentUrl="/components/header"
+                        />
+                      ),
+                    },
                   ]}
                 />
               }

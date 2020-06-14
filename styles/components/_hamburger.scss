@@ -1,0 +1,58 @@
+.hamburger {
+  $self: &;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.2s;
+
+  &:hover,
+  &:focus {
+    #{$self}__bar {
+      background-color: $c-primary;
+    }
+  }
+
+  &__bar {
+    display: block;
+    width: 23px;
+    height: 2px;
+    background-color: $c-black;
+    border-radius: 1px;
+
+    &:nth-child(1) {
+      transition: transform 0.2s cubic-bezier(0.25, 0.95, 0.55, 1.22),
+        opacity 0.2s;
+
+      .open & {
+        opacity: 0;
+        transform: translateY(6px);
+        transition: transform 0.2s cubic-bezier(0.25, 0.95, 0.55, 1.22),
+          opacity 0.2s;
+      }
+    }
+
+    &:nth-child(2) {
+      margin-top: 5px;
+      transition: transform 0.2s cubic-bezier(0.25, 0.95, 0.55, 1.22);
+
+      .open & {
+        transform: translateY(1px) rotate(-45deg);
+        transition: transform 0.2s cubic-bezier(0.25, 0.95, 0.55, 1.22);
+      }
+    }
+
+    &:nth-child(3) {
+      margin-top: 5px;
+      transition: transform 0.2s cubic-bezier(0.25, 0.95, 0.55, 1.22);
+
+      .open & {
+        transform: translateY(-6px) rotate(45deg);
+        transition: transform 0.2s cubic-bezier(0.25, 0.95, 0.55, 1.22);
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    display: none;
+  }
+}
