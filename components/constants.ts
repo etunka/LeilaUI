@@ -4,11 +4,11 @@ export const languages: Language[] = [
   {
     code: 'en',
     label: 'EN',
-    rootUrl: '/',
+    rootUrl: '/components/header',
   },
   {
     code: 'nl',
     label: 'NL',
-    rootUrl: '/nl',
+    rootUrl: '/components/header',
   },
 ]

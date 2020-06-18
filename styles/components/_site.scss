@@ -1,7 +1,6 @@
 @import '../mixins/container';
 
 .site {
-  @include container;
   margin-top: 3rem;
 
   &__title {

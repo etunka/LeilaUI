@@ -1,8 +1,8 @@
 .toggle-language {
   display: flex;
 
-  &__item a {
-    .active & {
+  &__item {
+    &.selected {
       color: $c-primary;
     }
   }

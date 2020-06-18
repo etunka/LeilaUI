@@ -13,12 +13,16 @@ const ToggleLanguage: FC<Props> = ({ languages, selected }) => {
     <div className={'toggle-language'}>
       {languages.map((language, index) => {
         const languageClass = classNames('toggle-language__item', {
-          selected: selected,
+          selected: language.code === selected,
         })
+        const isLast = index === languages.length - 1
         return (
-          <Link href={language.rootUrl} key={index}>
-            <a className={languageClass}>{language.label}</a>
-          </Link>
+          <>
+            <Link href={language.rootUrl} key={index}>
+              <a className={languageClass}>{language.label}</a>
+            </Link>
+            {!isLast && <span>/</span>}
+          </>
         )
       })}
     </div>

@@ -14,7 +14,9 @@
       margin-left: 1.75rem;
 
       &:hover {
-        color: $c-primary;
+        > a {
+          color: $c-primary;
+        }
       }
       &:first-child {
         margin-left: 0;
