@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Testimonial from '../components/testimonial/Testimonial'
 
 export default function Home() {
   return (
@@ -32,6 +31,11 @@ export default function Home() {
           <li>
             <Link href="/components/header">
               <a>Header components</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/components/hero">
+              <a>Hero components</a>
             </Link>
           </li>
         </ul>
