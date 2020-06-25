@@ -1,0 +1,25 @@
+.hero {
+  position: relative;
+
+  &__cta-container {
+    @include container;
+    margin-top: 1rem;
+  }
+
+  @media only screen and (min-width: 768px) {
+    &__cta-container {
+      position: absolute;
+      max-width: 300px;
+      bottom: 2.75rem;
+      right: 1rem;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    &__cta-container {
+      max-width: 500px;
+      bottom: 4rem;
+      right: 3rem;
+    }
+  }
+}

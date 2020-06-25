@@ -1,5 +1,4 @@
 import React, { FC } from 'react'
-import classNames from 'classnames'
 import Button from 'components/Button'
 
 type Props = {
@@ -9,10 +8,10 @@ type Props = {
   buttonText?: string
 }
 
-const CTA: FC<Props> = ({ title, content, button, buttonText }) => {
+const CallToAction: FC<Props> = ({ title, content, button, buttonText }) => {
   return (
     <div className="cta">
-      {title && <h3 className="cta__title">{title}</h3>}
+      {title && <h2 className="cta__title">{title}</h2>}
       <p className="cta__content">{content}</p>
       {button && (
         <div className="cta__button">
@@ -23,4 +22,4 @@ const CTA: FC<Props> = ({ title, content, button, buttonText }) => {
   )
 }
 
-export default CTA
+export default CallToAction

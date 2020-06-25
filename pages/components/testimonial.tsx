@@ -5,10 +5,12 @@ import Testimonial from 'components/testimonial/Testimonial'
 const QuoteContent = () => {
   return (
     <>
-      Nap all day cat dog hate mouse eat string barf pillow no baths hate
-      everything but kitty poochy. Sleep on keyboard toy mouse squeak roll over.
-      <strong>Mesmerizing birds.</strong> Poop on grasses licks paws destroy
-      couch intently sniff hand. The dog smells bad gnaw the corn cob.
+      Cat ipsum dolor sit amet, I will be pet I will be pet and then I will
+      hiss. Vommit food and eat it again stare at wall turn and meow stare at
+      wall some more meow again continue staring so enslave the hooman. Sleep on
+      keyboard toy mouse squeak roll over. <strong>Mesmerizing birds.</strong>{' '}
+      Poop on grasses licks paws destroy couch intently sniff hand. The dog
+      smells bad gnaw the corn cob.
     </>
   )
 }

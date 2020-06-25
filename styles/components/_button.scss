@@ -1,0 +1,15 @@
+.button {
+  max-width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: $c-primary;
+  color: $c-white;
+
+  &--small {
+    width: 175px;
+  }
+
+  &--large {
+    width: 350px;
+  }
+}

@@ -1,0 +1,42 @@
+.cta {
+  &__title {
+    margin: 0;
+    font-size: 1.75rem;
+    color: $c-primary;
+    line-height: 1.3;
+  }
+
+  &__content {
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  @media only screen and (min-width: 768px) {
+    &__title {
+      font-size: 1.5rem;
+    }
+
+    &__content {
+      font-size: 1.125rem;
+    }
+
+    &__button {
+      font-size: 1.25rem;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    &__title {
+      font-size: 2.5rem;
+    }
+
+    &__content {
+      font-size: 1.5rem;
+      line-height: 1.5;
+    }
+
+    &__button {
+      margin-top: 3rem;
+    }
+  }
+}

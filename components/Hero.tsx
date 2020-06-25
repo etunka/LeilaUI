@@ -1,10 +1,11 @@
 import React, { FC } from 'react'
 import classNames from 'classnames'
-import CTA from 'components/CTA'
+import CallToAction from 'components/CallToAction'
 
 type Props = {
-  alignment?: 'left' | 'right' | 'center'
-  backgroundImageUrl: string
+  imagePosition?: 'background' | 'img-element'
+  contentAlignment?: 'left' | 'right' | 'center'
+  imageUrl: string
   title?: string
   content: string
   button?: boolean
@@ -12,24 +13,27 @@ type Props = {
 }
 
 const Hero: FC<Props> = ({
-  alignment = 'right',
-  backgroundImageUrl,
+  imagePosition = 'background',
+  contentAlignment = 'right',
+  imageUrl,
   title,
   content,
   button,
   buttonText,
 }) => {
   const heroClass = classNames('hero', {
-    'hero--right': alignment === 'right',
-    'hero--left': alignment === 'left',
-    'hero--center': alignment === 'center',
+    'hero--bg': imagePosition === 'background',
+    'hero--img': imagePosition === 'img-element',
+    'hero--right': contentAlignment === 'right',
+    'hero--left': contentAlignment === 'left',
+    'hero--center': contentAlignment === 'center',
   })
 
   return (
     <div className={heroClass}>
-      <img className="hero__image" src={backgroundImageUrl} />
+      <img className="hero__image" src={imageUrl} />
       <div className="hero__cta-container">
-        <CTA
+        <CallToAction
           title={title}
           content={content}
           button={button}

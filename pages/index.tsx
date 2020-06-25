@@ -20,7 +20,7 @@ export default function Home() {
       <main>
         <h1 className="site__title">Welcome to Leila UI</h1>
         <h2 className="site__intro">
-          ~a minimalist UI library made with React and some catnip~
+          ~a highly opinionated UI library made with React and some catnip~
         </h2>
         <ul>
           <li>

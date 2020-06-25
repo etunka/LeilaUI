@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Hero from 'components/Hero'
-import CTA from 'components/CTA'
 
 export default function HeroPage() {
   return (
@@ -29,11 +28,11 @@ export default function HeroPage() {
           <h2 className="section__title">Hero Right</h2>
           <div className="section__content">
             <Hero
-              backgroundImageUrl="/images/cat-grey.png"
-              title="lorem ipsum"
-              content="Lorem ipsum dolor sit amet miyav miyav"
+              imageUrl="/images/cat-grey.png"
+              title="Cat ipsum dolor sit amet, I will be pet I will be pet."
+              content="Tuxedo cats always looking dapper stare at imaginary bug make plans to dominate world and then take a nap, and then I will hiss."
               button
-              buttonText="miyav"
+              buttonText="Click to Hiss"
             />
           </div>
         </section>
