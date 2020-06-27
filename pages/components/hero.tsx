@@ -36,6 +36,19 @@ export default function HeroPage() {
             />
           </div>
         </section>
+        <section className="section">
+          <h2 className="section__title">Hero Left</h2>
+          <div className="section__content">
+            <Hero
+              contentAlignment="left"
+              imageUrl="/images/cat-grey-flipped.png"
+              title="Cat ipsum dolor sit amet, I will be pet I will be pet."
+              content="Tuxedo cats always looking dapper stare at imaginary bug make plans to dominate world and then take a nap, and then I will hiss."
+              button
+              buttonText="Click to Hiss"
+            />
+          </div>
+        </section>
       </main>
     </div>
   )

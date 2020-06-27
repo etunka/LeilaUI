@@ -1,5 +1,7 @@
 .hero {
+  $self: &;
   position: relative;
+  padding-bottom: 2rem;
 
   &__cta-container {
     @include container;
@@ -7,19 +9,61 @@
   }
 
   @media only screen and (min-width: 768px) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 400px;
+    padding: 0;
+
     &__cta-container {
-      position: absolute;
       max-width: 300px;
-      bottom: 2.75rem;
-      right: 1rem;
+      text-align: right;
+      overflow: hidden;
+      z-index: 10;
+      margin: 0 1.5rem 0;
+    }
+
+    &__image {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+
+    &--left {
+      justify-content: flex-start;
+
+      #{$self}__cta-container {
+        margin: 0 0 0 1.5rem;
+        text-align: left;
+      }
     }
   }
 
   @media only screen and (min-width: 1024px) {
+    height: 500px;
     &__cta-container {
-      max-width: 500px;
-      bottom: 4rem;
-      right: 3rem;
+      max-width: 450px;
+    }
+  }
+
+  @media only screen and (min-width: 1280px) {
+    height: 600px;
+
+    &__cta-container {
+      max-width: 550px;
+      margin-right: 3rem;
+    }
+
+    &--left {
+      #{$self}__cta-container {
+        margin-left: 3rem;
+        text-align: left;
+      }
     }
   }
 }
