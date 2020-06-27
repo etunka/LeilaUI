@@ -32,6 +32,7 @@
       right: 0;
       top: 0;
       bottom: 0;
+      opacity: 0.7;
     }
 
     &--left {
@@ -42,12 +43,28 @@
         text-align: left;
       }
     }
+
+    &--center {
+      justify-content: center;
+
+      #{$self}__cta-container {
+        max-width: 500px;
+        margin: 0;
+        text-align: center;
+      }
+    }
   }
 
   @media only screen and (min-width: 1024px) {
     height: 500px;
     &__cta-container {
       max-width: 450px;
+    }
+
+    &--center {
+      #{$self}__cta-container {
+        max-width: 650px;
+      }
     }
   }
 
@@ -63,6 +80,13 @@
       #{$self}__cta-container {
         margin-left: 3rem;
         text-align: left;
+      }
+    }
+
+    &--center {
+      #{$self}__cta-container {
+        max-width: 750px;
+        margin: 0;
       }
     }
   }

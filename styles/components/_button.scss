@@ -2,14 +2,20 @@
   max-width: 100%;
   padding: 1rem;
   border-radius: 10px;
+  cursor: pointer;
+  transition: color 0.5s ease-in-out;
   background-color: $c-primary;
   color: $c-white;
 
+  &:hover {
+    background-color: darken($c-primary, 5%);
+  }
+
   &--small {
-    width: 175px;
+    width: 150px;
   }
 
   &--large {
-    width: 350px;
+    width: 250px;
   }
 }

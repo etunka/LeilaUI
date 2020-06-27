@@ -15,15 +15,19 @@ const Button: FC<Props> = ({ size, url = '#', text }) => {
   })
 
   return (
-    <button className={buttonClass}>
+    <>
       {url ? (
         <Link href={url}>
-          <a>{text}</a>
+          <a>
+            <button className={buttonClass}>{text}</button>
+          </a>
         </Link>
       ) : (
-        <React.Fragment>{text}</React.Fragment>
+        <button className={buttonClass}>
+          <React.Fragment>{text}</React.Fragment>
+        </button>
       )}
-    </button>
+    </>
   )
 }
 
