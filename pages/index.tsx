@@ -38,6 +38,11 @@ export default function Home() {
               <a>Hero components</a>
             </Link>
           </li>
+          <li>
+            <Link href="/components/text-image">
+              <a>Text-Image components</a>
+            </Link>
+          </li>
         </ul>
       </main>
     </div>

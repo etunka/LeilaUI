@@ -1,0 +1,57 @@
+.text-image {
+  @media only screen and (min-width: 768px) {
+    $self: &;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+
+    &__image {
+      display: flex;
+      flex: 1;
+    }
+
+    &__text {
+      min-width: 40%;
+      flex: 1;
+      margin-left: 2rem;
+      line-height: 1.4;
+    }
+
+    &--right {
+      flex-direction: row-reverse;
+
+      #{$self}__text {
+        margin: 0;
+      }
+
+      #{$self}__image {
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    &__text {
+      font-size: 1.25rem;
+    }
+
+    &__image {
+      img {
+        width: 95%;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1280px) {
+    &__text {
+      font-size: 1.5rem;
+    }
+
+    &__image {
+      img {
+        width: 90%;
+      }
+    }
+  }
+}
